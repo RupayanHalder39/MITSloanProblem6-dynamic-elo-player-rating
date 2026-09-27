@@ -1,0 +1,47 @@
+claim_id,metric,number,source_table,source_row_filter,figure,report_section,verified,notes
+CLAIM-01,Variant A MAE (test),4.231,stage5_primary_method_comparison.csv,method=variant_A,stage7_f1_method_comparison.png,ExpandedExperimentalResultsReport.md #10,YES,Reproduced exactly in Stage5ReproductionCheck.md
+CLAIM-01,last5 MAE (test),4.448,stage5_primary_method_comparison.csv,method=last5,stage7_f1_method_comparison.png,ExpandedExperimentalResultsReport.md #10,YES,
+CLAIM-01,season_to_date MAE (test),4.395,stage5_primary_method_comparison.csv,method=season_to_date,stage7_f1_method_comparison.png,ExpandedExperimentalResultsReport.md #10,YES,
+CLAIM-01,career_to_date MAE (test),4.349,stage5_primary_method_comparison.csv,method=career_to_date,stage7_f1_method_comparison.png,ExpandedExperimentalResultsReport.md #10,YES,
+CLAIM-01,Variant A Spearman (test),0.534,stage5_primary_method_comparison.csv,method=variant_A,stage7_f1_method_comparison.png,ExpandedExperimentalResultsReport.md #10,YES,
+CLAIM-01,last5 Spearman (test),0.477,stage5_primary_method_comparison.csv,method=last5,stage7_f1_method_comparison.png,ExpandedExperimentalResultsReport.md #10,YES,
+CLAIM-01,relative MAE improvement vs last5,4.88%,exp_bootstrap_effects.csv,comparison=variant_A vs last5,stage7_f10_bootstrap_effects.png,ExpandedExperimentalResultsReport.md #26,YES,
+CLAIM-01,relative MAE improvement vs season_to_date,3.73%,exp_bootstrap_effects.csv,comparison=variant_A vs season_to_date,stage7_f10_bootstrap_effects.png,ExpandedExperimentalResultsReport.md #26,YES,
+CLAIM-01,relative MAE improvement vs career_to_date,2.71%,exp_bootstrap_effects.csv,comparison=variant_A vs career_to_date,stage7_f10_bootstrap_effects.png,ExpandedExperimentalResultsReport.md #26,YES,
+CLAIM-01,bootstrap MAE diff vs last5 (95% CI),"-0.217 [-0.286,-0.149]",exp_bootstrap_effects.csv,comparison=variant_A vs last5,stage7_f10_bootstrap_effects.png,ExpandedExperimentalResultsReport.md #25,YES,CI entirely negative; robust
+CLAIM-01,bootstrap MAE diff vs season_to_date (95% CI),"-0.164 [-0.229,-0.099]",exp_bootstrap_effects.csv,comparison=variant_A vs season_to_date,stage7_f10_bootstrap_effects.png,ExpandedExperimentalResultsReport.md #25,YES,robust
+CLAIM-01,bootstrap MAE diff vs career_to_date (95% CI),"-0.118 [-0.201,-0.038]",exp_bootstrap_effects.csv,comparison=variant_A vs career_to_date,stage7_f10_bootstrap_effects.png,ExpandedExperimentalResultsReport.md #25,YES,robust; strengthens Stage 5 (Variant C's gap was not robust)
+CLAIM-01,test cohort n,11353,stage5_primary_method_comparison.csv,any row,stage7_f1_method_comparison.png,Stage5PredictiveDecision.md,YES,common cohort across all 9 methods
+CLAIM-01,test cohort unique players,734,TemporalEvaluationSplit.md,test split,,TemporalEvaluationSplit.md,YES,
+CLAIM-02,future horizons tested,"1,2,3,5,7",exp_future_horizons.csv,all rows,stage7_f2_future_horizon_robustness.png,ExpandedExperimentalResultsReport.md #6,YES,
+CLAIM-02,Variant A MAE at horizon 1,6.473,exp_future_horizons.csv,horizon=1;method=variant_A,stage7_f2_future_horizon_robustness.png,ExpandedExperimentalResultsReport.md #6,YES,
+CLAIM-02,Variant A MAE at horizon 7,3.230,exp_future_horizons.csv,horizon=7;method=variant_A,stage7_f2_future_horizon_robustness.png,ExpandedExperimentalResultsReport.md #6,YES,Variant A wins MAE at every horizon 1-7
+CLAIM-02,n at horizon 7,8894,exp_future_horizons.csv,horizon=7,stage7_f2_future_horizon_robustness.png,ExpandedExperimentalResultsReport.md #6,YES,smallest horizon sample (data truncation)
+CLAIM-03,history threshold,~15 matches,exp_history_depth.csv,bucket=15-29,stage7_f3_history_depth.png,ExpandedExperimentalResultsReport.md #8,YES,predefined bucket boundary, not a fitted changepoint
+CLAIM-03,Variant A MAE 15-29 bucket,3.909,exp_history_depth.csv,history_bucket=15-29;method=variant_A,stage7_f3_history_depth.png,ExpandedExperimentalResultsReport.md #8,YES,
+CLAIM-03,last5 MAE 15-29 bucket,4.183,exp_history_depth.csv,history_bucket=15-29;method=last5,stage7_f3_history_depth.png,ExpandedExperimentalResultsReport.md #8,YES,
+CLAIM-03,Variant A MAE 0-4 bucket,4.248,exp_history_depth.csv,history_bucket=0-4;method=variant_A,stage7_f3_history_depth.png,ExpandedExperimentalResultsReport.md #8,YES,last5 marginally better here (4.201)
+CLAIM-04,top-20% mean future-3 (test),57.54,exp_ranking.csv,cutoff=top20,stage7_f8_ranking_robustness.png,ExpandedExperimentalResultsReport.md #19,YES,
+CLAIM-04,rest mean future-3 (test),49.47,exp_ranking.csv,cutoff=top20,stage7_f8_ranking_robustness.png,ExpandedExperimentalResultsReport.md #19,YES,
+CLAIM-04,top-20% gap train season,7.18,exp_ranking.csv,cutoff=top20_train,stage7_f8_ranking_robustness.png,ExpandedExperimentalResultsReport.md #19,YES,
+CLAIM-04,top-20% gap validation season,7.66,exp_ranking.csv,cutoff=top20_validation,stage7_f8_ranking_robustness.png,ExpandedExperimentalResultsReport.md #19,YES,
+CLAIM-04,top-20% gap test season,8.18,exp_ranking.csv,cutoff=top20_test,stage7_f8_ranking_robustness.png,ExpandedExperimentalResultsReport.md #19,YES,
+CLAIM-04,decile 1 mean,46.43,stage5_ranking_deciles.csv,rating_decile=0,stage7_f8_ranking_robustness.png,ExpandedExperimentalResultsReport.md #19,YES,
+CLAIM-04,decile 10 mean,60.84,stage5_ranking_deciles.csv,rating_decile=9,stage7_f8_ranking_robustness.png,ExpandedExperimentalResultsReport.md #19,YES,
+CLAIM-05,Variant A vs Variant B MAE diff (95% CI),"-0.056 [-0.087,-0.024]",exp_bootstrap_effects.csv,comparison=variant_A vs variant_B,"stage7_d3_variant_comparison.png,stage7_f10_bootstrap_effects.png",ExpandedExperimentalResultsReport.md #25,YES,robust
+CLAIM-05,Variant A vs Variant C MAE diff (95% CI),"-0.049 [-0.085,-0.015]",exp_bootstrap_effects.csv,comparison=variant_A vs variant_C,"stage7_d3_variant_comparison.png,stage7_f10_bootstrap_effects.png",ExpandedExperimentalResultsReport.md #25,YES,robust
+CLAIM-05,Variant B MAE (test),4.286,stage5_primary_method_comparison.csv,method=variant_B,stage7_d3_variant_comparison.png,ExpandedExperimentalResultsReport.md #10,YES,
+CLAIM-05,Variant C MAE (test),4.280,stage5_primary_method_comparison.csv,method=variant_C,stage7_d3_variant_comparison.png,ExpandedExperimentalResultsReport.md #10,YES,
+CLAIM-06,Score A MAE (test),4.507,exp_score_ablation.csv,score_variant=Score A,stage7_f7_scoreA_vs_scoreB.png,ExpandedExperimentalResultsReport.md #16,YES,
+CLAIM-06,Score B MAE (test),4.231,exp_score_ablation.csv,score_variant=Score B,stage7_f7_scoreA_vs_scoreB.png,ExpandedExperimentalResultsReport.md #16,YES,
+CLAIM-06,Score A Spearman (test),0.503,exp_score_ablation.csv,score_variant=Score A,stage7_f7_scoreA_vs_scoreB.png,ExpandedExperimentalResultsReport.md #16,YES,
+CLAIM-06,Score B Spearman (test),0.534,exp_score_ablation.csv,score_variant=Score B,stage7_f7_scoreA_vs_scoreB.png,ExpandedExperimentalResultsReport.md #16,YES,
+NEGATIVE-01,opponent_scale=0.00 MAE (validation),4.151,exp_opponent_scale.csv,opponent_scale=0.00;eval_split=validation,stage7_f6_opponent_adjustment_hurts.png,ExpandedExperimentalResultsReport.md #12,YES,
+NEGATIVE-01,opponent_scale=0.05 MAE (validation),4.386,exp_opponent_scale.csv,opponent_scale=0.05;eval_split=validation,stage7_f6_opponent_adjustment_hurts.png,ExpandedExperimentalResultsReport.md #12,YES,monotonic increase across all 6 grid points
+NEGATIVE-01,opponent_scale=0.00 Spearman (validation),0.495,exp_opponent_scale.csv,opponent_scale=0.00;eval_split=validation,stage7_f6_opponent_adjustment_hurts.png,ExpandedExperimentalResultsReport.md #12,YES,
+NEGATIVE-01,opponent_scale=0.05 Spearman (validation),0.433,exp_opponent_scale.csv,opponent_scale=0.05;eval_split=validation,stage7_f6_opponent_adjustment_hurts.png,ExpandedExperimentalResultsReport.md #12,YES,monotonic decrease
+NEGATIVE-02,GK R2 (Variant A, test),-0.122,exp_position.csv,position_group=GK;method=variant_A,stage7_f4_position_performance.png,ExpandedExperimentalResultsReport.md #9,YES,
+NEGATIVE-02,GK last1 Spearman (test),0.027,exp_gk_diagnosis.csv,position_group=GK,stage7_f5_goalkeeper_diagnosis.png,ExpandedExperimentalResultsReport.md #10,YES,
+NEGATIVE-02,GK between-player variance share,10%,exp_target_stability.csv,position_group=GK,stage7_f5_goalkeeper_diagnosis.png,ExpandedExperimentalResultsReport.md #10,YES,between/(between+within)
+NEGATIVE-02,DEF/MID/ATT between-player variance share range,26-31%,exp_target_stability.csv,position_group in (DEF,MID,ATT),stage7_f5_goalkeeper_diagnosis.png,ExpandedExperimentalResultsReport.md #10,YES,
+NEGATIVE-02,GK unique players (test),93,exp_target_stability.csv,position_group=GK,stage7_f5_goalkeeper_diagnosis.png,ExpandedExperimentalResultsReport.md #10,YES,small sample, flagged as a limitation

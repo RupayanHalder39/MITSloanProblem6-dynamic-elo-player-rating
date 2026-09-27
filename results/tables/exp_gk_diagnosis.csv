@@ -1,0 +1,2 @@
+position_group,n_test_rows,n_players,median_matches_per_player_test,future3_target_variance,score_variance_within_player,score_variance_between_player,lag1_autocorrelation,last1_MAE,last1_Spearman,last1_R2,last3_MAE,last3_Spearman,last3_R2,last5_MAE,last5_Spearman,last5_R2,career_to_date_MAE,career_to_date_Spearman,career_to_date_R2,variant_A_MAE,variant_A_Spearman,variant_A_R2
+GK,733,45,13.0,18.364,59.866,6.882,-0.086,3.647,0.027,-0.162,3.666,0.07,-0.142,3.581,0.116,-0.093,3.479,0.186,-0.037,3.502,0.181,-0.068

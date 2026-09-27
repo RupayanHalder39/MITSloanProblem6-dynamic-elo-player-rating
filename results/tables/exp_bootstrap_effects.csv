@@ -1,0 +1,6 @@
+comparison,mae_diff_mean,mae_diff_ci_lo,mae_diff_ci_hi,robust,spearman_diff_mean,spearman_diff_ci_lo,spearman_diff_ci_hi,absolute_MAE_improvement,relative_MAE_improvement_pct,n_boot,seed
+variant_A vs last5,-0.2174,-0.2863,-0.1493,True,0.0569,0.0411,0.0725,0.217,4.88,2000,42
+variant_A vs season_to_date,-0.1643,-0.2293,-0.0988,True,0.0318,0.017,0.0465,0.164,3.73,2000,42
+variant_A vs career_to_date,-0.1175,-0.2007,-0.0383,True,0.0088,-0.0068,0.0249,0.118,2.71,2000,42
+variant_A vs variant_B,-0.0557,-0.0867,-0.0243,True,0.0172,0.0069,0.0276,0.055,1.28,2000,42
+variant_A vs variant_C,-0.0491,-0.0852,-0.0149,True,0.0116,0.0016,0.0221,0.049,1.14,2000,42

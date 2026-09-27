@@ -1,0 +1,5 @@
+position_group,n_rows,n_players,score_variance_within_player_mean,score_variance_between_player,lag1_autocorrelation_mean,lag3_autocorrelation_mean,n_players_lag1
+ATT,8113,569,39.775,17.84,-0.037,-0.06,346
+DEF,16079,646,68.492,24.499,-0.02,-0.038,444
+GK,3130,93,59.866,6.882,-0.086,-0.028,81
+MID,19993,920,47.066,19.791,-0.032,-0.009,648

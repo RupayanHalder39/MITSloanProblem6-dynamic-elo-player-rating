@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated research."
+title: "Beyond Recent Form: Dynamic Player Ratings for Predicting Near-Future Football Performance"
+type: software
+authors:
+  - given-names: "Rupayan"
+    family-names: "Halder"
+  - name: "ADDITIONAL AUTHOR(S), IF ANY, TO BE CONFIRMED"
+year: 2026
+license: MIT
+abstract: "Code and aggregate results for a chronological dynamic player-rating study developed in collaboration with SoccerSolver."
